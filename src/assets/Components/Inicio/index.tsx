@@ -77,7 +77,7 @@ const Container = styled.div`
     }
 
     h1 {
-      font-size: 32px;
+      font-size: 1rem;
 
     }
     .menu-suspenso {
