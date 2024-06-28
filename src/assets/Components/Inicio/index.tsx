@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import NavBar from '../NavBar';
 
-
+import estrela from '/public/Star 3.svg';
 const Container = styled.div`
     background: #FFFAFA;
     width: 100vw;
@@ -27,24 +27,32 @@ const Container = styled.div`
 
   .Titulo{
     display: flex;
-    flex-direction: column;
     position: relative;
     top: 16%;
     left: 10%;
-    width: 450px;
-    height: 34%;
+    width: 60%;
+    justify-content: space-around;
+    gap: 10%;
 
-    h2{
-    font-size: 3rem;
-  }
+    .chamada{
+      display: flex;
+      flex-direction: column;
+      height: 40%;
+      width: 45%;
 
-  p{
-    font-size: 1rem;
+      h2{
+        font-size: 3rem;
+      }
 
-  }
-  }
+      p{
+        font-size: 1.5rem;
+        color: #464646;
+      }
+    }
+}
 
-  
+
+
 `;
 
 const Inicio = () => {
@@ -56,9 +64,18 @@ const Inicio = () => {
       </div>
 
       <div className='Titulo'>
-        <h2>Transforme suas ideias em código.</h2>
-        <p>Crio produtos que resolvem problemas e encantam usuários através de soluções de design bem elaboradas.</p>
+        <div className='chamada'>
+          <h2>
+            Transforme suas <span style={{ color: '#1A83A4' }}>ideias</span> em código.
+          </h2>
+          <p>Crio produtos que resolvem problemas e encantam usuários através de soluções de design bem elaboradas.</p>
+        </div>
+        <img className="star" src={estrela} alt="" />
+
       </div>
+
+
+
     </Container>
   );
 };
