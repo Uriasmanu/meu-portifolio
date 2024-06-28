@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 import NavBar from '../NavBar';
 
-import estrela from '/public/Star 3.svg';
+import estrela from '/Star 3.svg';
+import { useState } from 'react';
+import MenuSuspenso from '../menuSuspenso';
+
 const Container = styled.div`
     background: #FFFAFA;
     width: 100vw;
@@ -37,7 +40,6 @@ const Container = styled.div`
     .chamada{
       display: flex;
       flex-direction: column;
-      height: 40%;
       width: 45%;
 
       h2{
@@ -50,17 +52,95 @@ const Container = styled.div`
       }
     }
 }
+.menu-suspenso {
+    display: none;
+  }
+
+  .nav-bar {
+    display: flex;
+  }
+
+  @media (max-width: 768px) {
+
+    background: #FFFAFA;
+    width: 100vw;
+    height: 50vh;
+    border-radius: 0 0 50px 50px;
+    display: flex;
+    flex-direction: column;
+
+    .cabecalho-infos{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 32px;
+
+    }
+    .menu-suspenso {
+      display: flex;
+    }
+
+    .nav-bar {
+      display: none;
+    }
+
+    .Titulo{
+      display: flex;
+        position: relative;
+        top: 6%;
+        left: 0%;
+        width: 100%;
+        justify-content: space-around;
+        gap: 10%;
+        flex-direction: column;
 
 
+    .chamada{
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+
+      h2{
+        font-size: 2.5rem;
+      }
+
+      p{
+        font-size: 1rem;
+        color: #464646;
+        width: 79%;
+      }
+    }
+
+  }
+  .star{
+    display: flex;
+    width: 71%;
+    height: 50%;
+  }
+}
 
 `;
 
 const Inicio = () => {
+  const [menuAberto, setMenuAberto] = useState(false);
+
+  const AbrirMenu = () =>{
+    setMenuAberto(!menuAberto);
+  }
+
   return (
     <Container>
-      <div>
+      <div className='cabecalho-infos' >
         <h1>Urias</h1>
-        <NavBar />
+        <div className="nav-bar">
+          <NavBar />
+        </div>
+        <div className="menu-suspenso" onClick={AbrirMenu}>
+          <MenuSuspenso />
+        </div>
       </div>
 
       <div className='Titulo'>
