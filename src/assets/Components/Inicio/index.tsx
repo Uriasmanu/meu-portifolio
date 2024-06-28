@@ -34,7 +34,7 @@ const Container = styled.div`
     top: 16%;
     left: 10%;
     width: 60%;
-height: auto:
+height: auto;
 padding:2%;
     justify-content: space-around;
     gap: 10%;
