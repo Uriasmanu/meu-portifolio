@@ -89,22 +89,20 @@ const Container = styled.div`
 
     .Titulo{
       display: flex;
-        position: relative;
         top: 6%;
-        left: 0%;
-        width: 100%;
+        width: 83%;
         justify-content: space-around;
-        gap: 10%;
         flex-direction: column;
-
+        align-items: center;
 
     .chamada{
       display: flex;
-      flex-direction: column;
-      width: 100vw;
+        flex-direction: column;
+        width: 92vw;
 
       h2{
         font-size: 2.5rem;
+        width: 90%;
       }
 
       p{

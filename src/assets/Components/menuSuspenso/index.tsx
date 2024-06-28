@@ -1,48 +1,121 @@
-import styled from 'styled-components';
-
-const ContainerMenu = styled.div`
-    display: flex;
-
-    .fundo-preto{
-        background: #000902;
-        height: 55px;
-        width: 55px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 0 0 0 15px;
-
-        img{
-            cursor: pointer;
-            height: 45px;
-            width: 45px;
-            margin: 5%;
-        }
-
-    }
-    
-
-`
+import styled, { keyframes } from 'styled-components';
+import { useState } from 'react';
 import menu from "/public/menu.svg";
 import fechar from "/public/close.svg";
-import { useState } from 'react';
+
+const slideIn = keyframes`
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+`;
+
+const slideOut = keyframes`
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+`;
+
+const ContainerMenu = styled.div<{ isOpen: boolean }>`
+  display: flex;
+
+  .fundo-preto {
+    background: #000902;
+    height: 55px;
+    width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 0 15px;
+
+    img {
+      cursor: pointer;
+      height: 45px;
+      width: 45px;
+      margin: 5%;
+      z-index: 2;
+    }
+  }
+
+  .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #FFFAFA;
+    animation: ${({ isOpen }) => (isOpen ? slideIn : slideOut)} 0.3s forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    z-index: 1;
+    align-items: flex-start;
+
+    ul{
+        display: flex;
+        list-style: none;
+        height: 100%;
+        width: 66%;
+        align-items: flex-start;
+        font-weight: bold;
+        flex-direction: column;
+        gap: 3%;
+        margin: 16% 7%;
 
 
+        li{
+            font-size: 1.5rem;
+
+        }
+    }
+
+    button{
+        background: #FFFAFA;
+        border: black 1px solid;
+        width: 120px;
+        height: 37px;
+        border-radius: 16px;
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin-left: 5%;
+    }
+  }
+`;
 
 const MenuSuspenso = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const menus = ["Home", "Meus Trabalhos", "Sobre mim", "Contato"];
+
     const handleToggle = () => {
         setIsOpen(!isOpen);
-    }
+    };
 
     return (
-        <ContainerMenu onClick={handleToggle}>
-            <div className='fundo-preto' >
-                <img src={isOpen ? fechar : menu} alt="menu" />
-            </div>
+        <div>
+            <ContainerMenu isOpen={isOpen}>
+                <div className='fundo-preto' onClick={handleToggle}>
+                    <img src={isOpen ? fechar : menu} alt="menu" />
+                </div>
+                {isOpen && (
+                    <div className="menu">
+                        <button>Curriculo</button>
 
-        </ContainerMenu>
-    )
-}
+                        <ul>
+                            {menus.map((menu, index) => (
+                                <li key={index}>{menu}</li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
+            </ContainerMenu>
+        </div>
+    );
+};
 
 export default MenuSuspenso;
