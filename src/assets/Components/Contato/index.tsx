@@ -27,16 +27,21 @@ const ContainerContato = styled.div<{ cor: string }>`
       font-size: 1rem;
     }
 
-    button {
+    a{
+
+
+      .whatsapp {
       background: #000902;
       color: #FFFFFF;
       border: none;
-      width: 15%;
+      width: 250px;
       border-radius: 25px;
       font-weight: 700;
       font-size: 1.2rem;
       cursor: pointer;
-      padding: 1%;
+      padding: 3%;
+      text-align: center;
+    }
     }
   }
 
@@ -64,30 +69,38 @@ const ContainerContato = styled.div<{ cor: string }>`
       font-size: 1rem;
     }
 
-    button {
+    a{
+      .whatsapp {
       background: #000902;
       color: #FFFFFF;
       border: none;
-      width: 55%;
       border-radius: 25px;
+      width: 250px;
       font-weight: 700;
       font-size: 1.2rem;
       cursor: pointer;
       padding: 3%;
       text-align: center;
     }
+    }
+
   }
 }
 `;
 
 const Contato = () => {
   const corContato = texts.cards.Card4.cor; // Obtendo a cor de texts.cards.Card4
+  const whatsappLink = "https://wa.me/5514996257741?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20seus%20serviços.";
 
   return (
     <ContainerContato cor={corContato}>
       <div className="contato">
         <h2>Interessado em Trabalhar Juntos?</h2>
-        <button>{texts.cards.Card4.textoBotao}</button>
+        <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+          <button className='whatsapp' >{texts.cards.Card4.textoBotao}</button>
+        </a>
+
+
       </div>
     </ContainerContato>
   );
