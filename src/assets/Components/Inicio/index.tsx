@@ -23,7 +23,7 @@ const Container = styled.div`
     flex-direction: column;
 
   h1 {
-    font-size: 48px;
+    font-size: 2rem;
     font-family: 'Grape Nuts', cursive;
     font-weight: inherit;
     font-style: italic; 
@@ -43,6 +43,7 @@ const Container = styled.div`
     top: 16%;
     left: 10%;
     width: 60%;
+padding:2%;
     justify-content: space-around;
     gap: 10%;
 
@@ -88,7 +89,7 @@ const Container = styled.div`
     }
 
     h1 {
-      font-size: 32px;
+      font-size: 2.5rem;
 
     }
     .menu-suspenso {
