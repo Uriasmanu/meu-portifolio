@@ -6,10 +6,11 @@ import arrow from '/arrow.svg'
 
 const ContainerCards = styled.div<{ cor: string }>`
   margin-top: 2%;
+  width: 100%;
 
   .moldura {
     background: ${({ cor }) => cor};
-    width: 568px;
+    width: 100%;
     height: 15rem;
     padding: 5%;
     border-radius: 25px;

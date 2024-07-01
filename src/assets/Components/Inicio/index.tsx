@@ -80,7 +80,7 @@ const Container = styled.div`
 
   .nav-bar {
     display: flex;
-    width: 80%;
+    width: 100%;
 
   }
 
@@ -98,6 +98,7 @@ const Container = styled.div`
       display: flex;
       justify-content: space-between;
       align-items: center;
+      width: 100%;
     }
 
     h1 {

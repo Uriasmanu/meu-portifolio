@@ -21,7 +21,7 @@ const GlobalStyles = createGlobalStyle`
 // Componente estilizado Menu
 const Menu = styled.div`
     background: #000902;
-    width: 100vw;
+    width: 100%;
     height: 75px;
     border-radius: 0 0 0 25px;
     color: FFFAFA;
@@ -33,7 +33,7 @@ const Menu = styled.div`
         justify-content: space-around;
         list-style: none;
         height: 100%;
-        width: 66%;
+        width: 6%;
         align-items: center;
         font-weight: bold;
         color: #FFFAFA;
