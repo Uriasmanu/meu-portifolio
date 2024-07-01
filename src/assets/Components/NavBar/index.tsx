@@ -24,7 +24,7 @@ const Menu = styled.div`
     width: 100vw;
     height: 75px;
     border-radius: 0 0 0 25px;
-    color: white;
+    color: FFFAFA;
     align-items: center;
 
 
@@ -36,6 +36,7 @@ const Menu = styled.div`
         width: 66%;
         align-items: center;
         font-weight: bold;
+        color: #FFFAFA;
 
         li{
             cursor: pointer;

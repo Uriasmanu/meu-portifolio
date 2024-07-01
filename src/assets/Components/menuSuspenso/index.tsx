@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import menu from "/public/menu.svg";
 import fechar from "/public/close.svg";
 
@@ -21,7 +21,7 @@ const slideOut = keyframes`
   }
 `;
 
-const ContainerMenu = styled.div<{ isOpen: boolean }>`
+const ContainerMenu = styled.div<{ isOpen: boolean; isAnimating: boolean }>`
   display: flex;
 
   .fundo-preto {
@@ -49,73 +49,82 @@ const ContainerMenu = styled.div<{ isOpen: boolean }>`
     width: 100vw;
     height: 100vh;
     background: #FFFAFA;
-    animation: ${({ isOpen }) => (isOpen ? slideIn : slideOut)} 0.3s forwards;
-    display: flex;
+    animation: ${({ isOpen }) => (isOpen ? slideIn : slideOut)} 0.3s ease-in-out;
+    display: ${({ isAnimating, isOpen }) => (!isOpen && !isAnimating ? 'none' : 'flex')};
     flex-direction: column;
     align-items: center;
     padding-top: 10px;
     z-index: 1;
     align-items: flex-start;
 
-    ul{
-        display: flex;
-        list-style: none;
-        height: 100%;
-        width: 66%;
-        align-items: flex-start;
-        font-weight: bold;
-        flex-direction: column;
-        gap: 3%;
-        margin: 16% 7%;
+    ul {
+      display: flex;
+      list-style: none;
+      height: 100%;
+      width: 66%;
+      align-items: flex-start;
+      font-weight: bold;
+      flex-direction: column;
+      gap: 3%;
+      margin: 16% 7%;
 
-
-        li{
-            font-size: 1.5rem;
-
-        }
+      li {
+        font-size: 1.5rem;
+      }
     }
 
-    button{
-        background: #FFFAFA;
-        border: black 1px solid;
-        width: 120px;
-        height: 37px;
-        border-radius: 16px;
-        font-weight: 700;
-        font-size: 1.2rem;
-        margin-left: 5%;
+    button {
+      background: #FFFAFA;
+      border: black 1px solid;
+      width: 120px;
+      height: 37px;
+      border-radius: 16px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-left: 5%;
     }
   }
 `;
 
 const MenuSuspenso = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const menus = ["Home", "Meus Trabalhos", "Sobre mim", "Contato"];
+  const [isOpen, setIsOpen] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const menus = ["Home", "Meus Trabalhos", "Sobre mim", "Contato"];
 
-    const handleToggle = () => {
-        setIsOpen(!isOpen);
-    };
+  useEffect(() => {
+    if (!isOpen && isAnimating) {
+      const timer = setTimeout(() => {
+        setIsAnimating(false);
+      }, 300); // Duração da animação
 
-    return (
-        <div>
-            <ContainerMenu isOpen={isOpen}>
-                <div className='fundo-preto' onClick={handleToggle}>
-                    <img src={isOpen ? fechar : menu} alt="menu" />
-                </div>
-                {isOpen && (
-                    <div className="menu">
-                        <button>Curriculo</button>
+      return () => clearTimeout(timer);
+    }
+  }, [isOpen, isAnimating]);
 
-                        <ul>
-                            {menus.map((menu, index) => (
-                                <li key={index}>{menu}</li>
-                            ))}
-                        </ul>
-                    </div>
-                )}
-            </ContainerMenu>
+  const handleToggle = () => {
+    if (isOpen) {
+      setIsAnimating(true);
+    }
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <div>
+      <ContainerMenu isOpen={isOpen} isAnimating={isAnimating}>
+        <div className='fundo-preto' onClick={handleToggle}>
+          <img src={isOpen ? fechar : menu} alt="menu" />
         </div>
-    );
+        <div className="menu">
+          <button>Curriculo</button>
+          <ul>
+            {menus.map((menu, index) => (
+              <li key={index}>{menu}</li>
+            ))}
+          </ul>
+        </div>
+      </ContainerMenu>
+    </div>
+  );
 };
 
 export default MenuSuspenso;

@@ -4,6 +4,15 @@ import NavBar from '../NavBar';
 import estrela from '/Star 3.svg';
 import { useState } from 'react';
 import MenuSuspenso from '../menuSuspenso';
+import Cards from '../cards';
+
+const ContainerMaior = styled.div`
+  .containerDeCards{
+    display: flex;
+    gap: 2%;
+    width: 100%;
+  }
+`
 
 const Container = styled.div`
     background: #FFFAFA;
@@ -58,6 +67,8 @@ const Container = styled.div`
 
   .nav-bar {
     display: flex;
+    width: 80%;
+
   }
 
   @media (max-width: 768px) {
@@ -126,36 +137,41 @@ const Container = styled.div`
 const Inicio = () => {
   const [menuAberto, setMenuAberto] = useState(false);
 
-  const AbrirMenu = () =>{
+  const AbrirMenu = () => {
     setMenuAberto(!menuAberto);
   }
 
   return (
-    <Container>
-      <div className='cabecalho-infos' >
-        <h1>Urias</h1>
-        <div className="nav-bar">
-          <NavBar />
+    <ContainerMaior>
+      <Container>
+        <div className='cabecalho-infos' >
+          <h1>Urias</h1>
+          <div className="nav-bar">
+            <NavBar />
+          </div>
+          <div className="menu-suspenso" onClick={AbrirMenu}>
+            <MenuSuspenso />
+          </div>
         </div>
-        <div className="menu-suspenso" onClick={AbrirMenu}>
-          <MenuSuspenso />
+
+        <div className='Titulo'>
+          <div className='chamada'>
+            <h2>
+              Transforme suas <span style={{ color: '#1A83A4' }}>ideias</span> em código.
+            </h2>
+            <p>Crio produtos que resolvem problemas e encantam usuários através de soluções de design bem elaboradas.</p>
+          </div>
+          <img className="star" src={estrela} alt="" />
+
         </div>
+
+      </Container>
+      <div className='containerDeCards'>
+        <Cards cardKey="Card1" />
+        <Cards cardKey="Card2" />
+        <Cards cardKey="Card3" />
       </div>
-
-      <div className='Titulo'>
-        <div className='chamada'>
-          <h2>
-            Transforme suas <span style={{ color: '#1A83A4' }}>ideias</span> em código.
-          </h2>
-          <p>Crio produtos que resolvem problemas e encantam usuários através de soluções de design bem elaboradas.</p>
-        </div>
-        <img className="star" src={estrela} alt="" />
-
-      </div>
-
-
-
-    </Container>
+    </ContainerMaior>
   );
 };
 
