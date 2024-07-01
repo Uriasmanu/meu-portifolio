@@ -45,6 +45,19 @@ const ContainerCards = styled.div<{ cor: string }>`
 
 
   }
+
+  @media (max-width: 768px) {
+    .moldura {
+      background: ${({ cor }) => cor};
+      width: 100vw;
+      height: 15rem;
+      padding: 5%;
+      border-radius: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 10%;
+    }
+  }
 `;
 
 interface CardProps {

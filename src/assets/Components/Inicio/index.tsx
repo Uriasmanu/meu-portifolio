@@ -12,6 +12,17 @@ const ContainerMaior = styled.div`
     gap: 2%;
     width: 100%;
   }
+
+  @media (max-width: 768px) {
+
+      .containerDeCards{
+      display: flex;
+      gap: 15px;
+      width: 100%;
+      flex-direction: column;
+      margin-top: 15px;
+    }
+  }
 `
 
 const Container = styled.div`
@@ -43,7 +54,7 @@ const Container = styled.div`
     top: 16%;
     left: 10%;
     width: 60%;
-padding:2%;
+    padding:2%;
     justify-content: space-around;
     gap: 10%;
 
