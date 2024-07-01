@@ -9,7 +9,7 @@ const ContainerCards = styled.div<{ cor: string }>`
 
   .moldura {
     background: ${({ cor }) => cor};
-    width: 36rem;
+    width: 568px;
     height: 15rem;
     padding: 5%;
     border-radius: 25px;
