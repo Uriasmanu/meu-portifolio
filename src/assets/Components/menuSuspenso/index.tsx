@@ -70,6 +70,14 @@ const ContainerMenu = styled.div<{ isOpen: boolean; isAnimating: boolean }>`
 
       li {
         font-size: 1.5rem;
+        cursor: pointer;  
+        &:hover{
+          color: #718a27;
+        }
+      }
+
+      a{
+        color: #000902;
       }
     }
 
@@ -89,7 +97,8 @@ const ContainerMenu = styled.div<{ isOpen: boolean; isAnimating: boolean }>`
 const MenuSuspenso = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
-  const menus = ["Home", "Meus Trabalhos", "Sobre mim", "Contato"];
+  const menus = ["Inicio", "Meus Trabalhos", "Sobre mim", "Contato"];
+  const whatsappLink = "https://wa.me/5514996257741?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20seus%20serviços.";
 
   useEffect(() => {
     if (!isOpen && isAnimating) {
@@ -118,7 +127,13 @@ const MenuSuspenso = () => {
           <button>Curriculo</button>
           <ul>
             {menus.map((menu, index) => (
+              menu === "Contato" ?(
+                <li key={index}>
+                  <a href={whatsappLink} target="_blank" rel="noopener noreferrer">{menu}</a>
+                </li>
+              ) : (
               <li key={index}>{menu}</li>
+            )
             ))}
           </ul>
         </div>

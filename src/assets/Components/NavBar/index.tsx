@@ -41,7 +41,10 @@ const Menu = styled.div`
         li{
             cursor: pointer;
             font-size: 18px;
-
+           
+            &:hover{
+            color: #718a27;
+            }
         }
     }
 
@@ -59,7 +62,7 @@ const Menu = styled.div`
 
 
 const NavBar = () => {
-    const menus = ["Home", "Meus Trabalhos", "Sobre mim", "Contato"];
+    const menus = ["Inicio", "Meus Trabalhos", "Sobre mim", "Contato"];
 
     return (
         <>
