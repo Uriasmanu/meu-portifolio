@@ -5,6 +5,7 @@ import estrela from '/Star 3.svg';
 import { useState } from 'react';
 import MenuSuspenso from '../menuSuspenso';
 import Cards from '../cards';
+import Contato from '../Contato';
 
 const ContainerMaior = styled.div`
   .containerDeCards{
@@ -34,7 +35,7 @@ const Container = styled.div`
     flex-direction: column;
 
   h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-family: 'Grape Nuts', cursive;
     font-weight: inherit;
     font-style: italic; 
@@ -183,6 +184,7 @@ const Inicio = () => {
         <Cards cardKey="Card2" />
         <Cards cardKey="Card3" />
       </div>
+      <Contato/>
     </ContainerMaior>
   );
 };
