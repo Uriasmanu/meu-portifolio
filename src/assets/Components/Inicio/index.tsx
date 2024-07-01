@@ -17,7 +17,7 @@ const ContainerMaior = styled.div`
 const Container = styled.div`
     background: #FFFAFA;
     width: 100vw;
-    height: 50vh;
+    height: auto;
     border-radius: 0 0 50px 50px;
     display: flex;
     flex-direction: column;
