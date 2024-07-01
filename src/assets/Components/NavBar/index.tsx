@@ -33,7 +33,7 @@ const Menu = styled.div`
         justify-content: space-around;
         list-style: none;
         height: 100%;
-        width: 6%;
+        width: 60%;
         align-items: center;
         font-weight: bold;
         color: #FFFAFA;
