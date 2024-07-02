@@ -36,14 +36,17 @@ const Menu = styled.div`
         width: 60%;
         align-items: center;
         font-weight: bold;
-        color: #FFFAFA;
+        
 
         li{
             cursor: pointer;
             font-size: 130%;
-           
-            &:hover{
+
+            a{
+                color: #FFFAFA;
+                &:hover{
             color: #718a27;
+            }
             }
         }
     }

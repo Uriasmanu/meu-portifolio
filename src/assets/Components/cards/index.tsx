@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { texts } from '../Textos';
 
@@ -31,6 +32,7 @@ const ContainerCards = styled.div<{ cor: string }>`
   .mais{
     display: flex;
     justify-content: space-between;
+    
 
     button{
       background: #000902;
@@ -41,9 +43,9 @@ const ContainerCards = styled.div<{ cor: string }>`
       justify-content: center;
       align-items: center;
       transform: rotate(-40deg);
+      cursor: pointer;
 
     }
-
 
   }
 
@@ -74,12 +76,14 @@ const Cards: React.FC<CardProps> = ({ cardKey }) => {
 
   return (
     <ContainerCards cor={card.cor}>
-      <div className="moldura">
-        <div className='mais'>
-        <h2>{card.titulo}</h2>
-        <button>
-          <img src={arrow} alt="" />
-        </button>
+       <div className="moldura">
+        <div className="mais">
+          <h2>{card.titulo}</h2>
+          <Link to="/MeusTrabalhos">
+            <button>
+              <img src={arrow} alt="Ir para Meus Trabalhos" />
+            </button>
+          </Link>
         </div>
         <p>{card.descricao}</p>
       </div>

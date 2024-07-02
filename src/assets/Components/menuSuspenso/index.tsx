@@ -1,7 +1,9 @@
 import styled, { keyframes } from 'styled-components';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import menu from "/public/menu.svg";
 import fechar from "/public/close.svg";
+
 
 const slideIn = keyframes`
   from {
@@ -97,8 +99,21 @@ const ContainerMenu = styled.div<{ isOpen: boolean; isAnimating: boolean }>`
 const MenuSuspenso = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
-  const menus = ["Inicio", "Meus Trabalhos","Contato"];
+
   const whatsappLink = "https://wa.me/5514996257741?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20seus%20serviços.";
+
+  type MenuItem = {
+      name: string;
+      path: string;
+      external?: boolean;
+  };
+
+  const menus: MenuItem[] = [
+      { name: "Inicio", path: "/" },
+      { name: "Meus Trabalhos", path: "/MeusTrabalhos" },
+      { name: "Sobre mim", path: "/SobreMim" },
+      { name: "Contato", path: whatsappLink, external: true }
+  ];
 
   useEffect(() => {
     if (!isOpen && isAnimating) {
@@ -126,16 +141,18 @@ const MenuSuspenso = () => {
         <div className="menu">
           <button>Curriculo</button>
           <ul>
-            {menus.map((menu, index) => (
-              menu === "Contato" ?(
-                <li key={index}>
-                  <a href={whatsappLink} target="_blank" rel="noopener noreferrer">{menu}</a>
-                </li>
-              ) : (
-              <li key={index}>{menu}</li>
-            )
-            ))}
-          </ul>
+                    {menus.map((menu, index) => (
+                        <li key={index}>
+                            {menu.external ? (
+                                <a href={menu.path} target="_blank" rel="noopener noreferrer">
+                                    {menu.name}
+                                </a>
+                            ) : (
+                                <Link to={menu.path}>{menu.name}</Link>
+                            )}
+                        </li>
+                    ))}
+                </ul>
         </div>
       </ContainerMenu>
     </div>
