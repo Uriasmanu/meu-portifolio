@@ -2,17 +2,17 @@ export const texts = {
     cards: {
       Card1: {
         titulo: "UI/UX",
-        descricao: "Especializo-me em criar sites centrados no usuário que combinam funcionalidade com estética cativante, garantindo experiências incríveis.",
+        descricao: "Explore minhas criações centradas no usuário!",
         cor: "#CCD5AE",
       },
       Card2: {
         titulo: "Branding",
-        descricao: "Crio identidades de marca abrangentes onde cada elemento deixa um impacto memorável e significativo.",
+        descricao: "Descubra como construo marcas memoráveis!",
         cor: "#FEFAE0",
       },
       Card3: {
         titulo: "Graphics",
-        descricao: "Crio soluções visuais onde a criatividade se funde perfeitamente com o propósito para entregar resultados de design envolventes e eficazes.",
+        descricao: "Veja minhas soluções visuais criativas!",
         cor: "#D4A373",
       },
       Card4: {
