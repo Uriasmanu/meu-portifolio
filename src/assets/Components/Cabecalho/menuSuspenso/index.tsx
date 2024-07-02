@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import menu from "/public/menu.svg";
 import fechar from "/public/close.svg";
-import BotaoDownload from '../BotaoDownload';
+import BotaoDownload from '../../BotaoDownload';
 
 const slideIn = keyframes`
   from {

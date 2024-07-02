@@ -1,6 +1,6 @@
 
-import Header from '../../Components/Header';
-import { useMenuContext } from '../../contexts/MenuContext';
+import Header from '../../Components/Cabecalho/Header';
+import { useMenuContext } from '../../Contexts/MenuContext';
 
 
 

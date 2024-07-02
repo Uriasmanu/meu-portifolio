@@ -4,7 +4,7 @@ import Inicio from './assets/Paginas/Inicio';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MeusTrabalhos from './assets/Paginas/MeusTrabalhos';
 import NotFound from './assets/Paginas/NotFound/indesx';
-import { MenuProvider } from './assets/contexts/MenuContext';
+import { MenuProvider } from './assets/Contexts/MenuContext';
 import Curriculo from './assets/Paginas/Curriculo';
 
 
