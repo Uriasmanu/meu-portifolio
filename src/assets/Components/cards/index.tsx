@@ -19,11 +19,11 @@ const ContainerCards = styled.div<{ cor: string }>`
     gap: 10%;
 
     h2{
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
 
     p{
-      font-size: 2rem;
+      font-size: 1.5rem;
 
     }
   }
