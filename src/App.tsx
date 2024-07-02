@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MeusTrabalhos from './assets/Paginas/MeusTrabalhos';
 import NotFound from './assets/Paginas/NotFound/indesx';
 import { MenuProvider } from './assets/contexts/MenuContext';
+import Curriculo from './assets/Paginas/Curriculo';
 
 
 const App: React.FC = () => {
@@ -15,6 +16,7 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<Inicio />} />
             <Route path="/MeusTrabalhos" element={<MeusTrabalhos />} />
+            <Route path="/Curriculo" element={<Curriculo />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Router>

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import menu from "/public/menu.svg";
 import fechar from "/public/close.svg";
-
+import BotaoDownload from '../BotaoDownload';
 
 const slideIn = keyframes`
   from {
@@ -77,22 +77,16 @@ const ContainerMenu = styled.div<{ isOpen: boolean; isAnimating: boolean }>`
           color: #718a27;
         }
       }
-
-      a{
-        color: #000902;
-      }
     }
+  }
+`;
 
-    button {
-      background: #FFFAFA;
-      border: black 1px solid;
-      width: 120px;
-      height: 37px;
-      border-radius: 16px;
-      font-weight: 700;
-      font-size: 1.2rem;
-      margin-left: 5%;
-    }
+const CustomBotaoDownload = styled(BotaoDownload)`
+  background-color: #000902; /* Cor específica para o MenuSuspenso */
+  color: #fff; /* Cor do texto para contraste */
+
+  a {
+    color: #fff; /* Cor do link para contraste */
   }
 `;
 
@@ -111,7 +105,6 @@ const MenuSuspenso = () => {
   const menus: MenuItem[] = [
       { name: "Inicio", path: "/" },
       { name: "Meus Trabalhos", path: "/MeusTrabalhos" },
-      { name: "Sobre mim", path: "/SobreMim" },
       { name: "Contato", path: whatsappLink, external: true }
   ];
 
@@ -139,20 +132,20 @@ const MenuSuspenso = () => {
           <img src={isOpen ? fechar : menu} alt="menu" />
         </div>
         <div className="menu">
-          <button>Curriculo</button>
+          <CustomBotaoDownload />
           <ul>
-                    {menus.map((menu, index) => (
-                        <li key={index}>
-                            {menu.external ? (
-                                <a href={menu.path} target="_blank" rel="noopener noreferrer">
-                                    {menu.name}
-                                </a>
-                            ) : (
-                                <Link to={menu.path}>{menu.name}</Link>
-                            )}
-                        </li>
-                    ))}
-                </ul>
+            {menus.map((menu, index) => (
+              <li key={index}>
+                {menu.external ? (
+                  <a href={menu.path} target="_blank" rel="noopener noreferrer">
+                    {menu.name}
+                  </a>
+                ) : (
+                  <Link to={menu.path}>{menu.name}</Link>
+                )}
+              </li>
+            ))}
+          </ul>
         </div>
       </ContainerMenu>
     </div>

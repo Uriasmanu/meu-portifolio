@@ -11,6 +11,14 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
 
+    .cabecalho-infos {
+
+            align-items: center;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
     h1 {
         font-size: 2.5rem;
         font-family: 'Grape Nuts', cursive;
@@ -20,10 +28,6 @@ const Container = styled.div`
         margin-right: 5%;
     }
 
-    div {
-        display: flex;
-        justify-content: space-evenly;
-    }
 
     .menu-suspenso {
         display: none;
@@ -49,6 +53,7 @@ const Container = styled.div`
             justify-content: space-between;
             align-items: center;
             width: 100%;
+            
         }
 
         h1 {

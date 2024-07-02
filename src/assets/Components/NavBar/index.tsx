@@ -1,5 +1,6 @@
 import styled, { createGlobalStyle } from 'styled-components';
 import { Link } from 'react-router-dom';
+import BotaoDownload from '../BotaoDownload';
 
 const GlobalStyles = createGlobalStyle`
     * {
@@ -24,8 +25,9 @@ const Menu = styled.div`
     width: 100%;
     height: 75px;
     border-radius: 0 0 0 25px;
-    color: FFFAFA;
+    color: #FFFAFA;
     align-items: center;
+    
 
 
     ul{
@@ -33,7 +35,6 @@ const Menu = styled.div`
         justify-content: space-around;
         list-style: none;
         height: 100%;
-        width: 60%;
         align-items: center;
         font-weight: bold;
         
@@ -51,17 +52,6 @@ const Menu = styled.div`
         }
     }
 
-    button{
-        background: #FFFAFA;
-        border: none;
-        width: 120px;
-        height: 37px;
-        border-radius: 16px;
-        font-weight: 700;
-        font-size: 15px;
-        margin-left: 5%;
-    }
-
 `;
 
 
@@ -77,7 +67,6 @@ const NavBar: React.FC = () => {
     const menus: MenuItem[] = [
         { name: "Inicio", path: "/" },
         { name: "Meus Trabalhos", path: "/MeusTrabalhos" },
-        { name: "Sobre mim", path: "/SobreMim" },
         { name: "Contato", path: whatsappLink, external: true }
     ];
 
@@ -97,8 +86,9 @@ const NavBar: React.FC = () => {
                             )}
                         </li>
                     ))}
+                <BotaoDownload/>
+
                 </ul>
-                <button>Curriculo</button>
             </Menu>
         </>
     );
