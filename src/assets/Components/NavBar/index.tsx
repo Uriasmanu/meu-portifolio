@@ -40,7 +40,7 @@ const Menu = styled.div`
 
         li{
             cursor: pointer;
-            font-size: 18px;
+            font-size: 1.5rem;
            
             &:hover{
             color: #718a27;

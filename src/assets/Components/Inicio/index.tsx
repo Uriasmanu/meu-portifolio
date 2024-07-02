@@ -124,11 +124,11 @@ const Container = styled.div`
     .chamada{
       display: flex;
         flex-direction: column;
-        width: 92vw;
+        width: 90%;
 
       h2{
         font-size: 2.5rem;
-        width: 90%;
+        width: 100%;
       }
 
       p{
