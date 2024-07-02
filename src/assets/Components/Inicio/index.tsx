@@ -54,25 +54,32 @@ const Container = styled.div`
     position: relative;
     top: 16%;
     left: 10%;
-    width: 60%;
-    padding:2%;
-    justify-content: space-around;
+    width: 80vw;
+    padding: 2%;
+    justify-content: flex-start;
     gap: 10%;
+    align-items: center;
 
     .chamada{
       display: flex;
       flex-direction: column;
-      width: 45%;
+      width: 33%;
+      height: 50%;
 
       h2{
-        font-size: 3rem;
+        font-size: 300%;
       }
 
       p{
-        font-size: 1.5rem;
+        font-size: 150%;
         color: #464646;
       }
     }
+    .star{
+    display: flex;
+    width: 30%;
+    height: 50%;
+  }
 }
 .menu-suspenso {
     display: none;
