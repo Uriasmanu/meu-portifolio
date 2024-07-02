@@ -58,6 +58,13 @@ const Menu = styled.div`
         font-size: 15px;
         margin-left: 5%;
     }
+
+    @media (max-width: 768px) {
+        li{
+            cursor: pointer;
+            font-size: 1rem;
+        }
+    }
 `;
 
 
