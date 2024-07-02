@@ -97,7 +97,7 @@ const ContainerMenu = styled.div<{ isOpen: boolean; isAnimating: boolean }>`
 const MenuSuspenso = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
-  const menus = ["Inicio", "Sobre mim", "Meus Trabalhos","Contato"];
+  const menus = ["Inicio", "Meus Trabalhos","Contato"];
   const whatsappLink = "https://wa.me/5514996257741?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20seus%20serviços.";
 
   useEffect(() => {

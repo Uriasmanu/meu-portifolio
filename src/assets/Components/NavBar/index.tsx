@@ -1,6 +1,6 @@
 import styled, { createGlobalStyle } from 'styled-components';
+import { Link } from 'react-router-dom';
 
-// Estilos globais
 const GlobalStyles = createGlobalStyle`
     * {
         margin: 0;
@@ -18,7 +18,7 @@ const GlobalStyles = createGlobalStyle`
     }
 `;
 
-// Componente estilizado Menu
+
 const Menu = styled.div`
     background: #000902;
     width: 100%;
@@ -62,16 +62,37 @@ const Menu = styled.div`
 `;
 
 
-const NavBar = () => {
-    const menus = ["Inicio", "Meus Trabalhos", "Sobre mim", "Contato"];
+const NavBar: React.FC = () => {
+    const whatsappLink = "https://wa.me/5514996257741?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20seus%20serviços.";
+
+    type MenuItem = {
+        name: string;
+        path: string;
+        external?: boolean;
+    };
+
+    const menus: MenuItem[] = [
+        { name: "Inicio", path: "/" },
+        { name: "Meus Trabalhos", path: "/MeusTrabalhos" },
+        { name: "Sobre mim", path: "/SobreMim" },
+        { name: "Contato", path: whatsappLink, external: true }
+    ];
 
     return (
         <>
-            <GlobalStyles /> {/* Aplicando estilos globais */}
+            <GlobalStyles />
             <Menu>
                 <ul>
                     {menus.map((menu, index) => (
-                        <li key={index}>{menu}</li>
+                        <li key={index}>
+                            {menu.external ? (
+                                <a href={menu.path} target="_blank" rel="noopener noreferrer">
+                                    {menu.name}
+                                </a>
+                            ) : (
+                                <Link to={menu.path}>{menu.name}</Link>
+                            )}
+                        </li>
                     ))}
                 </ul>
                 <button>Curriculo</button>

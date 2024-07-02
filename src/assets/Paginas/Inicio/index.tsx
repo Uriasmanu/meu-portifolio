@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import NavBar from '../NavBar';
+import NavBar from '../../Components/NavBar';
 
 import estrela from '/Star 3.svg';
 import { useState } from 'react';
-import MenuSuspenso from '../menuSuspenso';
-import Cards from '../cards';
-import Contato from '../Contato';
+import MenuSuspenso from '../../Components/menuSuspenso';
+import Cards from '../../Components/cards';
+import Contato from '../../Components/Contato';
 
 const ContainerMaior = styled.div`
   .containerDeCards{
