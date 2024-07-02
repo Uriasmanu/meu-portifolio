@@ -25,7 +25,7 @@ const BotaoDownload: React.FC<BotaoDownloadProps> = ({ className }) => {
     return (
         <ConstDownload  className={className}>
             <Link to="/Curriculo">
-                Download CV
+                Curriculo
             </Link>
         </ConstDownload>
     )
