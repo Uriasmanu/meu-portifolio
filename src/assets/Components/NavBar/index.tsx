@@ -59,7 +59,7 @@ const Menu = styled.div`
         margin-left: 5%;
     }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1080px) {
         li{
             cursor: pointer;
             font-size: 1rem;
