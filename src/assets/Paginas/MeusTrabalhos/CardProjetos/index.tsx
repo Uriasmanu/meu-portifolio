@@ -8,7 +8,7 @@ const ContainerCardsProjetos = styled.div`
   width: 100%;
   display: flex;
   width: 50vw;
-  height: 45vh;
+  height: 50vh;
   display: flex;
   margin-right: 2%;
 
@@ -16,6 +16,8 @@ const ContainerCardsProjetos = styled.div`
     width: 100%;
     height: 100%;
     background-color: #CCD5AE;
+    border-radius: 25px;
+
 
 }
 
