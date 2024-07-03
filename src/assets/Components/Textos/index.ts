@@ -20,6 +20,38 @@ export const texts = {
         textoBotao: "Vamos Conversar!",
         cor: "#1A83A4"
       }
+    },
+
+    cardsProjetos: {
+      Card1: {
+        titulo: "Graphics",
+        descricao: "Veja minhas soluções visuais criativas!",
+      },
+      Card2: {
+        titulo: "Graphics",
+        descricao: "Veja minhas soluções visuais criativas!",
+        link:"",
+      },
+      Card3: {
+        titulo: "Graphics",
+        descricao: "Veja minhas soluções visuais criativas!",
+        link:"",
+      },
+      Card4: {
+        titulo: "Graphics",
+        descricao: "Veja minhas soluções visuais criativas!",
+        link:"",
+      },
+      Card5: {
+        titulo: "Graphics",
+        descricao: "Veja minhas soluções visuais criativas!",
+        link:"",
+      },
+      Card6: {
+        titulo: "Graphics",
+        descricao: "Veja minhas soluções visuais criativas!",
+        link:"",
+      },
     }
   };
   

@@ -6,7 +6,7 @@ import MenuSuspenso from '../menuSuspenso';
 const Container = styled.div`
     background: #FFFAFA;
     width: 100vw;
-    height: 50vh;
+    height: 45vh;
     border-radius: 0 0 50px 50px;
     display: flex;
     flex-direction: column;

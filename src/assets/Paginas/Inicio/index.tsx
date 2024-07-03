@@ -23,16 +23,16 @@ const ContainerMaior = styled.div`
     .chamada {
       display: flex;
       flex-direction: column;
-      width: 33%;
-      height: 32%;
+      width: 25vw;
+      height: 35vh;
       margin-top: 5%;
 
       h2 {
-        font-size: 3rem; /* Corrigido o tamanho da fonte */
+        font-size: 300%; /* Corrigido o tamanho da fonte */
       }
 
       p {
-        font-size: 1.5rem; /* Corrigido o tamanho da fonte */
+        font-size: 150%t; /* Corrigido o tamanho da fonte */
         color: #464646;
       }
     }
@@ -40,7 +40,7 @@ const ContainerMaior = styled.div`
     .star {
       display: flex;
       width: 60%;
-      height: 50%;
+      height: 35vh;
     }
   }
 
