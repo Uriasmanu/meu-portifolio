@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import { useMenuContext } from '../../Contexts/MenuContext';
+import { useCarouselContext, useMenuContext } from '../../Contexts/MenuContext';
 import CardsProjeto from './CardProjetos';
 import Header from '../../Components/Cabecalho/Header';
-import { useEffect, useRef } from 'react';
 
 const ContainerTrabalhos = styled.div`
   display: flex;
@@ -29,59 +28,32 @@ const ContainerTrabalhos = styled.div`
 `;
 
 const CardWrapper = styled.div`
-  flex: 0 0 auto; /* Impede o flexbox de encolher ou crescer */
-  margin-right: 20px; /* Espaçamento entre os cards */
+  flex: 0 0 auto; 
+  margin-right: 20px; 
 `;
 
 const MeusTrabalhos = () => {
   const { abrirMenu } = useMenuContext();
-  const carrosselRef = useRef<HTMLDivElement>(null);
+  const { carrosselRef } = useCarouselContext();
 
-  useEffect(() => {
-    const handleScroll = (event: WheelEvent) => {
-      if (event.deltaY > 0) {
-        // Rolar para a direita
-        if (carrosselRef.current) {
-          carrosselRef.current.scrollLeft += 1000; 
-        }
-      } else {
-        // Rolar para a esquerda
-        if (carrosselRef.current) {
-          carrosselRef.current.scrollLeft -= 1000; 
 
-        }
-      }
-      event.preventDefault();
-    };
-
-    const container = carrosselRef.current;
-    if (container) {
-      container.addEventListener('wheel', handleScroll);
-    }
-
-    return () => {
-      if (container) {
-        container.removeEventListener('wheel', handleScroll);
-      }
-    };
-  }, []);
 
   return (
     <ContainerTrabalhos id="container-trabalhos">
-      <Header onMenuClick={abrirMenu}>
-        <div className='TituloTrabalhos'>
-          <h2>Meus Projetos</h2>
-        </div>
-      </Header>
-      <div className='CarroselProjetos' ref={carrosselRef}>
-        <CardWrapper><CardsProjeto cardKey='Card1' /></CardWrapper>
-        <CardWrapper><CardsProjeto cardKey='Card2' /></CardWrapper>
-        <CardWrapper><CardsProjeto cardKey='Card3' /></CardWrapper>
-        <CardWrapper><CardsProjeto cardKey='Card4' /></CardWrapper>
-        <CardWrapper><CardsProjeto cardKey='Card5' /></CardWrapper>
-        <CardWrapper><CardsProjeto cardKey='Card6' /></CardWrapper>
+    <Header onMenuClick={abrirMenu}>
+      <div className='TituloTrabalhos'>
+        <h2>Meus Projetos</h2>
       </div>
-    </ContainerTrabalhos>
+    </Header>
+    <div className='CarroselProjetos' ref={carrosselRef}>
+      <CardWrapper><CardsProjeto cardKey='Card1' /></CardWrapper>
+      <CardWrapper><CardsProjeto cardKey='Card2' /></CardWrapper>
+      <CardWrapper><CardsProjeto cardKey='Card3' /></CardWrapper>
+      <CardWrapper><CardsProjeto cardKey='Card4' /></CardWrapper>
+      <CardWrapper><CardsProjeto cardKey='Card5' /></CardWrapper>
+      <CardWrapper><CardsProjeto cardKey='Card6' /></CardWrapper>
+    </div>
+  </ContainerTrabalhos>
   );
 };
 
