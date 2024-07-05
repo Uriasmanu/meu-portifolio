@@ -1,30 +1,88 @@
-# React + TypeScript + Vite
+# Meu Portfólio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao meu portfólio! Sou Manú, uma programadora full-stack iniciante, e este projeto é uma vitrine dos meus trabalhos e habilidades. Aqui você encontrará exemplos dos meus projetos em UI/UX, Branding, e Graphics.
 
-Currently, two official plugins are available:
+## Visão Geral
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este portfólio foi desenvolvido para atrair tanto recrutadores quanto clientes freelancer, apresentando de forma clara e atrativa as minhas competências e projetos. Utilizo tecnologias modernas como React com TSX, styled-components e uma arquitetura bem organizada para facilitar a manutenção e escalabilidade do projeto.
 
-## Expanding the ESLint configuration
+## Estrutura do Projeto
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+A estrutura de pastas do projeto é a seguinte:
 
-- Configure the top-level `parserOptions` property like this:
+/Components
+/BotaoDownload
+/cards
+/Contato
+/Header
+/menuSuspenso
+/NavBar
+/Textos
+/Contexts
+/Paginas
+/Curriculo
+/Inicio
+/MeusTrabalhos
+/NotFound
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Componentes Principais
+
+- **Header:** Componente separado que é reutilizado na página inicial.
+- **cards:** Contém os cartões que descrevem meus serviços em UI/UX, Branding, e Graphics.
+- **BotaoDownload:** Botão para download do currículo.
+- **NavBar:** Barra de navegação para fácil acesso às diferentes seções do portfólio.
+- **Textos:** Armazena o conteúdo textual para os componentes React.
+
+## Tecnologias Utilizadas
+
+- **React** com **TSX**
+- **styled-components** para estilização
+- **Framer** para criação de landing pages
+- **Netlify** para hospedagem
+
+## Pré-Projeto
+
+O design inicial do portfólio foi planejado no **Figma** para garantir uma experiência visual coesa e atrativa antes de iniciar o desenvolvimento.
+
+## Serviços Oferecidos
+
+### UI/UX
+
+Especializo-me em criar sites centrados no usuário que combinam funcionalidade com estética cativante, garantindo experiências incríveis.
+
+[Explore minhas criações centradas no usuário!]
+
+### Branding
+
+Crio identidades de marca abrangentes onde cada elemento deixa um impacto memorável e significativo.
+
+[Descubra como construo marcas memoráveis!]
+
+### Graphics
+
+Crio soluções visuais onde a criatividade se funde perfeitamente com o propósito para entregar resultados de design envolventes e eficazes.
+
+[Veja minhas soluções visuais criativas!]
+
+## Como Executar o Projeto Localmente
+
+1. Clone o repositório:
+   ```sh
+   git clone https://github.com/seu-usuario/seu-repositorio.git
+
+2. Navegue até o diretório do projeto:
+
+```sh
+cd seu-repositorio;
+
+3. Instale as dependências:
+```sh
+npm install
+
+
+4. Inicie o servidor de desenvolvimento:
+
+```sh
+
+npm start
