@@ -20,7 +20,7 @@ const ContainerTrabalhos = styled.div`
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
-    width: 100%;
+    width: 95vw;
     margin-left: 5%;
   }
 
