@@ -73,16 +73,15 @@ Crio soluções visuais onde a criatividade se funde perfeitamente com o propós
 
 2. Navegue até o diretório do projeto:
 
-```sh
-cd seu-repositorio;
+   ```sh
+   cd seu-repositorio
 
 3. Instale as dependências:
-```sh
-npm install
+   ```sh
+   npm install
 
 
 4. Inicie o servidor de desenvolvimento:
 
-```sh
-
-npm start
+   ```sh
+   npm start

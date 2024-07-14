@@ -47,6 +47,7 @@ const Container = styled.div`
         display: flex;
         flex-direction: column;
         padding-bottom: 2%;
+        margin-bottom: 5%;
 
         .cabecalho-infos {
             display: flex;

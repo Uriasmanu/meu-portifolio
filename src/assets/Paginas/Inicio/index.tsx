@@ -24,7 +24,7 @@ const ContainerMaior = styled.div`
       display: flex;
       flex-direction: column;
       width: 25vw;
-      height: 35vh;
+
       margin-top: 5%;
 
       h2 {
