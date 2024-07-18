@@ -24,49 +24,65 @@ export const texts = {
 
   cardsProjetos: [
     {
-      titulo: "The Ladies",
-      descricao: "Página dedicada a anunciar e promover uma variedade de produtos femininos, destacando as últimas tendências e novidades do mercado.",
-      url: "https://theladies.vercel.app/"
+      titulo: "",
+      descricao: "",
+      linkSite:"",
+      url: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FqYafvuVAL5wpBJYymJdkvK%2Fsalao%3Fnode-id%3D15-25%26starting-point-node-id%3D15%253A25%26t%3DnGCtQoymlTP3lQta-1"
     },
     {
-      titulo: "Space-X",
-      descricao: "Página para cadastro de endereços, permitindo aos usuários inserir, editar e gerenciar suas informações de localização de forma prática.",
+      titulo: "",
+      descricao: "",
+      linkSite:"",
+      url: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FTAQ0H4D48BqyR2Lw8llIAP%2Flaydies%3Fnode-id%3D1-3%26t%3DKn7iILK8poPpX9do-1%26scaling%3Dscale-down%26content-scaling%3Dfixed%26page-id%3D0%253A1"
+    },
+    {
+      titulo: "",
+      descricao: "",
+      linkSite:"",
       url: "https://space-x-ten-zeta.vercel.app/"
     },
     {
-      titulo: "Horta Comunitária",
-      descricao: "Página que apresenta os projetos da horta comunitária, mostrando o progresso, as iniciativas e os benefícios para a comunidade local.",
+      titulo: "",
+      descricao: "",
+      linkSite:"",
       url: "https://horta-comunitaria-vinhas-do-senhor.vercel.app/"
     },
     {
-      titulo: "Landing Page Main Beta",
-      descricao: "Landing page simples e eficaz, projetada para capturar a atenção dos visitantes e fornecer informações claras e concisas sobre um produto ou serviço.",
+      titulo: "",
+      descricao: "",
+      linkSite:"",
       url: "https://landing-page-main-beta.vercel.app/"
     },
     {
-      titulo: "Projeto Mudança Dinâmica",
-      descricao: "Página com mudança dinâmica inspirada em One Piece, oferecendo uma experiência interativa e visualmente atraente baseada no famoso anime.",
+      titulo: "",
+      descricao: "",
+      linkSite:"",
       url: "https://projeto-mudanca-de-pagina-dinamica.vercel.app/"
     },
     {
-      titulo: "Agenda Sigma Eight",
-      descricao: "Página para cadastro de contatos, onde os usuários podem adicionar, atualizar e organizar suas informações de contato de maneira eficiente.",
+      titulo: "",
+      descricao: "",
+      linkSite:"",
       url: "https://agenda-sigma-eight.vercel.app/"
     },
     {
-      titulo: "Responsive Page using CSS",
-      descricao: "Página de cartão Pix, proporcionando uma interface intuitiva para criar e gerenciar cartões Pix com facilidade.",
+      titulo: "",
+      descricao: "",
+      linkSite:"",
       url: "https://responsive-page-using-css.vercel.app/"
     },
     {
-      titulo: "Alura SPA - Projeto Inicial SASS",
-      descricao: "Página dedicada a um SPA, oferecendo uma visão geral dos serviços, tratamentos e benefícios disponíveis para os clientes.",
+      titulo: "",
+      descricao: "",
+      linkSite:"",
       url: "https://alura-spa-projeto-inicial-sass.vercel.app/"
     },
     {
-      titulo: "AG-13-DSI - Página de Casamento",
-      descricao: "Página de casamento, fornecendo informações detalhadas sobre o evento, incluindo a programação, local e lista de presentes.",
+      titulo: "",
+      descricao: "",
+      linkSite:"",
       url: "https://ag-13-dsi.vercel.app/"
     }
   ]
 };
+

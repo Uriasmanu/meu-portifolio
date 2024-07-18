@@ -32,9 +32,11 @@ const ContainerTrabalhos = styled.div`
 const CardWrapper = styled.div`
   flex: 0 0 auto; 
   margin-right: 20px; 
-  max-width: 350px;
+  max-width: 450px;
 
 `;
+
+
 
 const MeusTrabalhos = () => {
   const { abrirMenu } = useMenuContext();
@@ -54,6 +56,7 @@ const MeusTrabalhos = () => {
           </CardWrapper>
         ))}
       </div>
+
     </ContainerTrabalhos>
   );
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ContainerCardsProjetos = styled.div`
-  margin-top: 2%;
+  margin-top: 5%;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -14,17 +14,9 @@ const ComponenteProjeto = styled.div`
   height: auto;
   background-color: #CCD5AE;
   border-radius: 25px;
-  padding: 15px;
+  padding: 5px;
   box-sizing: border-box;
-
-  h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
-
-  p {
-    font-size: 1em;
-  }
+  margin-bottom: 7%;
 
   a {
     display: block;
@@ -34,14 +26,13 @@ const ComponenteProjeto = styled.div`
   }
 
   .iframeContainer {
-    height: 400px; /* Defina a altura do iframe conforme necessário */
+    height: 550px;
     overflow: hidden;
     position: relative;
     width: 100%;
-    margin-top: 20px;
     border-radius: 15px;
     overflow: hidden;
-    margin-bottom: 7%;
+
   }
 
   iframe {
@@ -65,11 +56,15 @@ const CardsProjeto: React.FC<CardProps> = ({ projeto }) => {
     <ContainerCardsProjetos>
       <ComponenteProjeto>
         <div className="iframeContainer">
-          <iframe src={projeto.url} title={projeto.titulo} />
+          <iframe
+            src={projeto.url}
+            title={projeto.titulo}
+            width="500"
+            height="500"
+            allowFullScreen
+          />
         </div>
-        <h2>{projeto.titulo}</h2>
-        <p>{projeto.descricao}</p>
-        <a href={projeto.url} target="_blank" rel="noopener noreferrer">Ver Projeto</a>
+
       </ComponenteProjeto>
     </ContainerCardsProjetos>
   );
