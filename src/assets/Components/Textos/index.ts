@@ -39,14 +39,15 @@ export const texts = {
       titulo: "",
       descricao: "",
       linkSite:"",
-      url: "https://space-x-ten-zeta.vercel.app/"
+      url: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F50M7VgV3zqG3PZT6WyknSi%2Fdeshbord%3Fnode-id%3D1-2%26t%3Df8cLBK4GZlfGTAwT-1%26scaling%3Dscale-down%26content-scaling%3Dfixed%26page-id%3D0%253A1"
     },
     {
       titulo: "",
       descricao: "",
       linkSite:"",
-      url: "https://horta-comunitaria-vinhas-do-senhor.vercel.app/"
+      url: "https://space-x-ten-zeta.vercel.app/"
     },
+   
     {
       titulo: "",
       descricao: "",
