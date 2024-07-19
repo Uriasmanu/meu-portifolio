@@ -1,8 +1,8 @@
 import styled, { keyframes } from 'styled-components';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import menu from "/public/menu.svg";
-import fechar from "/public/close.svg";
+import menu from "/menu.svg";
+import fechar from "/close.svg";
 import BotaoDownload from '../../BotaoDownload';
 
 const slideIn = keyframes`
