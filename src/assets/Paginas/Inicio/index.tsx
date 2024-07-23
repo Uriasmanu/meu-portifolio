@@ -3,8 +3,9 @@ import styled from 'styled-components';
 import Cards from '../../Components/cards';
 import Contato from '../../Components/Contato';
 import estrela from '/Star 3.svg';
-import { useMenuContext } from '../../Contexts/MenuContext';
 import Header from '../../Components/Cabecalho/Header';
+import { useMenuContext } from '../../contexts/MenuContext';
+
 
 const ContainerMaior = styled.div`
   .containerDeCards {

@@ -1,8 +1,9 @@
 import styled from 'styled-components';
-import { useCarouselContext, useMenuContext } from '../../Contexts/MenuContext';
 import CardsProjeto from './CardProjetos';
 import Header from '../../Components/Cabecalho/Header';
 import { texts } from '../../Components/Textos';
+import { useMenuContext } from '../../contexts/MenuContext';
+import { useCarouselContext } from '../../contexts/CarouselContext';
 
 
 const ContainerTrabalhos = styled.div`

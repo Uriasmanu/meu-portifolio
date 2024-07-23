@@ -4,13 +4,13 @@ import Inicio from './assets/Paginas/Inicio';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MeusTrabalhos from './assets/Paginas/MeusTrabalhos';
 import NotFound from './assets/Paginas/NotFound/indesx';
-import { Provider } from './assets/Contexts/MenuContext';
 import Curriculo from './assets/Paginas/Curriculo';
+import Providers from './assets/contexts/Providers';
 
 
 const App: React.FC = () => {
   return (
-    <Provider>
+    <Providers>
       <StyleSheetManager shouldForwardProp={(prop) => prop !== 'isOpen' && prop !== 'isAnimating'}>
         <Router>
           <Routes>
@@ -21,7 +21,7 @@ const App: React.FC = () => {
           </Routes>
         </Router>
       </StyleSheetManager>
-    </Provider>
+    </Providers>
   );
 };
 

@@ -1,5 +1,6 @@
 import Header from "../../Components/Cabecalho/Header";
-import { useMenuContext } from "../../Contexts/MenuContext";
+import { useMenuContext } from "../../contexts/MenuContext";
+
 
 const NotFound = () => {
     const { abrirMenu } = useMenuContext();

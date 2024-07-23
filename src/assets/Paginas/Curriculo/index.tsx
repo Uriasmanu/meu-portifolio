@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Header from '../../Components/Cabecalho/Header';
-import { useMenuContext } from '../../Contexts/MenuContext';
+import { useMenuContext } from '../../contexts/MenuContext';
+
 
 const ContainerCurriculo = styled.div`
     display: flex;
