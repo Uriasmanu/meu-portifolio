@@ -27,43 +27,43 @@ export const texts = {
       titulo: "",
       descricao: "",
       linkSite:"",
-      url: "https://space-x-ten-zeta.vercel.app/"
+      url: ""
     },
     {
       titulo: "",
       descricao: "",
       linkSite:"",
-      url: "https://landing-page-main-beta.vercel.app/"
+      url: ""
     },
     {
       titulo: "",
       descricao: "",
       linkSite:"",
-      url: "https://projeto-mudanca-de-pagina-dinamica.vercel.app/"
+      url: ""
     },
     {
       titulo: "",
       descricao: "",
       linkSite:"",
-      url: "https://agenda-sigma-eight.vercel.app/"
+      url: ""
     },
     {
       titulo: "",
       descricao: "",
       linkSite:"",
-      url: "https://responsive-page-using-css.vercel.app/"
+      url: ""
     },
     {
       titulo: "",
       descricao: "",
       linkSite:"",
-      url: "https://alura-spa-projeto-inicial-sass.vercel.app/"
+      url: ""
     },
     {
       titulo: "",
       descricao: "",
       linkSite:"",
-      url: "https://ag-13-dsi.vercel.app/"
-    }
+      url:""
+    },
   ]
 };
