@@ -24,46 +24,28 @@ export const texts = {
 
   cardsProjetos: [
     {
-      titulo: "",
-      descricao: "",
-      linkSite:"",
+      caminho:"/comunitario.PNG",
       url: ""
     },
     {
-      titulo: "",
-      descricao: "",
-      linkSite:"",
+      caminho:"/deshbord.PNG",
       url: ""
     },
     {
-      titulo: "",
-      descricao: "",
-      linkSite:"",
+      caminho:"/ecomerce.PNG",
       url: ""
     },
     {
-      titulo: "",
-      descricao: "",
-      linkSite:"",
+      caminho:"/landing.PNG",
       url: ""
     },
     {
-      titulo: "",
-      descricao: "",
-      linkSite:"",
+      caminho:"/landing2.PNG",
       url: ""
     },
     {
-      titulo: "",
-      descricao: "",
-      linkSite:"",
+      caminho:"/salao.PNG",
       url: ""
-    },
-    {
-      titulo: "",
-      descricao: "",
-      linkSite:"",
-      url:""
     },
   ]
 };

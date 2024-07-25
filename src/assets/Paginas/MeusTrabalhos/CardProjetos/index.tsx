@@ -45,8 +45,7 @@ const ComponenteProjeto = styled.div`
 
 interface CardProps {
   projeto: {
-    titulo: string;
-    descricao: string;
+    caminho: string;
     url: string;
   };
 }
@@ -56,12 +55,8 @@ const CardsProjeto: React.FC<CardProps> = ({ projeto }) => {
     <ContainerCardsProjetos>
       <ComponenteProjeto>
         <div className="iframeContainer">
-          <iframe
-            src={projeto.url}
-            title={projeto.titulo}
-            width="500"
-            height="500"
-            allowFullScreen
+          <img
+            src={projeto.caminho}
           />
         </div>
 
