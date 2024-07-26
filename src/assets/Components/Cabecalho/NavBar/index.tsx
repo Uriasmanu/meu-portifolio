@@ -1,6 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
 import { Link } from 'react-router-dom';
-import BotaoDownload from '../../BotaoDownload';
 
 const GlobalStyles = createGlobalStyle`
     * {
@@ -86,7 +85,6 @@ const NavBar: React.FC = () => {
                             )}
                         </li>
                     ))}
-                <BotaoDownload/>
 
                 </ul>
             </Menu>

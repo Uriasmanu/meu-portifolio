@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import menu from "/menu.svg";
 import fechar from "/close.svg";
-import BotaoDownload from '../../BotaoDownload';
 
 const slideIn = keyframes`
   from {
@@ -81,14 +80,6 @@ const ContainerMenu = styled.div<{ isOpen: boolean; isAnimating: boolean }>`
   }
 `;
 
-const CustomBotaoDownload = styled(BotaoDownload)`
-  background-color: #000902; /* Cor específica para o MenuSuspenso */
-  color: #fff; /* Cor do texto para contraste */
-
-  a {
-    color: #fff; /* Cor do link para contraste */
-  }
-`;
 
 const MenuSuspenso = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -132,7 +123,6 @@ const MenuSuspenso = () => {
           <img src={isOpen ? fechar : menu} alt="menu" />
         </div>
         <div className="menu">
-          <CustomBotaoDownload />
           <ul>
             {menus.map((menu, index) => (
               <li key={index}>

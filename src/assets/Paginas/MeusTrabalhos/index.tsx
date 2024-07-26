@@ -22,7 +22,7 @@ const ContainerTrabalhos = styled.div`
     overflow-x: auto;
     scroll-behavior: smooth;
     width: 95vw;
-    margin-left: 5%;
+    margin-left: 2%;
   }
 
   .CarroselProjetos::-webkit-scrollbar {
