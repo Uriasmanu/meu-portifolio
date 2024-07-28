@@ -32,6 +32,10 @@ export const texts = {
       url: "https://dashbord-black.vercel.app/"
     },
     {
+      caminho:"/ecommerce-restaurante.PNG",
+      url: ""
+    },
+    {
       caminho:"/ecomerce.PNG",
       url: "https://theladies.vercel.app/"
     },
