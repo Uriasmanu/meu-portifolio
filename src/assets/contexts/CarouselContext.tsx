@@ -1,6 +1,5 @@
 import React, { createContext, useContext, useRef, useEffect } from 'react';
 
-// Tipos do carrossel
 interface CarouselContextType {
   carrosselRef: React.RefObject<HTMLDivElement>;
 }

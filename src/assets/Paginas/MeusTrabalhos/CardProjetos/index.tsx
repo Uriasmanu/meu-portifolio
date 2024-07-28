@@ -26,7 +26,7 @@ const ComponenteProjeto = styled.div`
   }
 
   .iframeContainer {
-    height: 550px;
+    height: 600px;
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -55,9 +55,11 @@ const CardsProjeto: React.FC<CardProps> = ({ projeto }) => {
     <ContainerCardsProjetos>
       <ComponenteProjeto>
         <div className="iframeContainer">
-          <img
-            src={projeto.caminho}
-          />
+        <a href={projeto.url}>
+            <img
+              src={projeto.caminho}
+            />
+          </a>
         </div>
 
       </ComponenteProjeto>

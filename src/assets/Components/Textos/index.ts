@@ -25,15 +25,15 @@ export const texts = {
   cardsProjetos: [
     {
       caminho:"/comunitario.PNG",
-      url: ""
+      url: "https://horta-comunitaria-vinhas-do-senhor.vercel.app/"
     },
     {
       caminho:"/deshbord.PNG",
-      url: ""
+      url: "https://dashbord-black.vercel.app/"
     },
     {
       caminho:"/ecomerce.PNG",
-      url: ""
+      url: "https://theladies.vercel.app/"
     },
     {
       caminho:"/landing.PNG",

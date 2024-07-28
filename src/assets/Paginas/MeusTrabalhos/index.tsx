@@ -1,10 +1,10 @@
+
 import styled from 'styled-components';
 import CardsProjeto from './CardProjetos';
 import Header from '../../Components/Cabecalho/Header';
 import { texts } from '../../Components/Textos';
 import { useMenuContext } from '../../contexts/MenuContext';
 import { useCarouselContext } from '../../contexts/CarouselContext';
-
 
 const ContainerTrabalhos = styled.div`
   display: flex;
@@ -34,10 +34,7 @@ const CardWrapper = styled.div`
   flex: 0 0 auto; 
   margin-right: 20px; 
   max-width: 450px;
-
 `;
-
-
 
 const MeusTrabalhos = () => {
   const { abrirMenu } = useMenuContext();
@@ -57,7 +54,6 @@ const MeusTrabalhos = () => {
           </CardWrapper>
         ))}
       </div>
-
     </ContainerTrabalhos>
   );
 };
